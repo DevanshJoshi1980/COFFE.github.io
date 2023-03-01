@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            position:relative;
+            width:200px;
+            height:200px;
+            background-color: red;
+        }
+        .image{
+            width:200px;
+            height:200px;
+            display:block;
+        }
+        .overlay{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            transition: all 0.2 s;
+            opacity: 0;
+            background-color:#e5591647;
+        }
+        .text{
+            position: absolute;
+            color: black;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform:translate(-50%,-50%);
+        }
+        .demo:hover .overlay{
+            opacity: 1;
+        }
+        .overlayleft{
+            height: 0;
+            width:100%;
+            top: 0;
+            left: 0;
+        }
+        .overlayright{
+            height: 100%;
+            width:0;
+            top: 0;
+            right:0;
+        }
+        .demo:hover .overlayleft{
+            height: 100%;
+        }
+        .demo:hover .overlayright{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <img src="about.jpg" alt="" class="image">
+    <div class="overlay overlayleft">
+        <div class="text">
+            left
+            </div>
+        </div>
+    </div>
+    <div class="demo">
+        <img src="about.jpg" alt="" class="image">
+    <div class="overlay overlayright">
+        <div class="text">
+            right
+            </div>
+        </div>
+    </div>
+        
+
+</body>
+</html>
